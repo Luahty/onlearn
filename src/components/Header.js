@@ -1,6 +1,4 @@
-'use client'
-
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import {
   Dialog,
   DialogPanel,
@@ -12,10 +10,29 @@ import {
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+      const handleScroll = () => {
+          const scrollPosition = window.scrollY;
+          if (scrollPosition > 50) {
+              setScrolled(true);
+          } else {
+              setScrolled(false);
+          }
+      };
+
+      window.addEventListener('scroll', handleScroll);
+
+      return () => {
+          window.removeEventListener('scroll', handleScroll);
+      };
+  }, []);
+
 
   return (
-    <header className="fixed w-full z-40 bg-transparent h-32">
-      <nav aria-label="Global" className="mx-auto flex max-w-full items-center justify-between p-6">
+    <header className={`fixed w-full z-40 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg h-20 xl:h-24 py-4' : 'bg-transparent h-32 py-8'}`}>
+      <nav aria-label="Global" className="mx-auto flex max-w-full items-center justify-between px-6">
         <div className="flex lg:flex-1 pl-10">
           <a href="#" className="-m-1.5 p-1.5 items-center">
             <img src={require(`../image/logo.png`)} alt="ONLEARN" className="h-[37.69px] w-auto"/>
@@ -33,24 +50,24 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex w-auto lg:gap-x-12 xl:gap-x-20 lg:mx-5">
 
-          <a href="#" className="text-lg font-semibold leading-6 text-[#FD661F]">
+          <a href="#" className="text-lg leading-6 text-[#252641] hover:text-[#FD661F] hover:font-semibold ">
             Home
           </a>
-          <a href="#" className="text-lg leading-6 text-[#252641]">
+          <a href="#" className="text-lg leading-6 text-[#252641] hover:text-[#FD661F] hover:font-semibold ">
             Careers
           </a>
-          <a href="#" className="text-lg leading-6 text-[#252641]">
+          <a href="#" className="text-lg leading-6 text-[#252641] hover:text-[#FD661F] hover:font-semibold ">
             Blog
           </a>
-          <a href="#" className="text-lg leading-6 text-[#252641]">
+          <a href="#" className="text-lg leading-6 text-[#252641] hover:text-[#FD661F] hover:font-semibold ">
             About Us
           </a>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <div href="#" className="w-28 h-12 xl:w-[135px] xl:h-[59px] my-auto bg-white rounded-md text-center lg:py-3 xl:py-4 text-base font-semibold leading-6 text-[#0B7077]">
+          <div href="#" className={`${scrolled ? ' border-2 border-gray-500 hover:bg-teal-500 hover:border-teal-500' : 'text-[#0B7077] bg-white hover:bg-gray-100'} w-28 h-12 xl:w-[135px] xl:h-[59px] my-auto rounded-md text-center lg:py-3 xl:py-4 text-base font-semibold leading-6`}>
             LOG IN
           </div>
-          <div href="#" className="w-28 h-12 xl:w-[135px] xl:h-[59px] my-auto ml-5 bg-[#0B7077] rounded-md text-center lg:py-3 xl:py-4 text-base font-semibold leading-6 text-white">
+          <div href="#" className="w-28 h-12 xl:w-[135px] xl:h-[59px] my-auto ml-5 bg-[#0B7077] hover:bg-teal-500 rounded-md text-center lg:py-3 xl:py-4 text-base font-semibold leading-6 text-white">
             SIGN UP
           </div>
         </div>
