@@ -10,7 +10,7 @@ export default function Footer() {
             />
             <div className="bg-[#D2E6E4] inset-0 -z-20 absolute w-full h-full mt-9 lg:mt-20"></div>
 
-            <div className="flex flex-wrap sm:flex-nowrap justify-between sm:px-16 mx-auto w-full">
+            <div className="flex flex-wrap sm:flex-nowrap justify-between md:mx-1 xl:mx-10 lg:mx-5 ">
                 {/* Left Section */}
                 <div className="w-full sm:w-1/3 mb-6 sm:mb-0 mr-5">
                     <img src={require(`../image/logo.png`)} alt="ONLEARN" className="h-[37.69px] w-auto" />
@@ -37,7 +37,7 @@ export default function Footer() {
                 {/* Middle Section */}
                 <div className="flex flex-wrap lg:justify-center xl:justify-end w-full sm:w-auto mt-10 sm:mt-0">
                     <div className="mr-5">
-                        <div className="flex flex-wrap">
+                        <div className="flex flex-wrap gap-y-5">
                             <div className="mb-6 sm:mb-0 mr-10">
                                 <h2 className="font-bold text-lg sm:text-xl mb-2">Categories</h2>
                                 <ul className="text-[#0B7077] space-y-2">
