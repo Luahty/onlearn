@@ -51,7 +51,7 @@ export default function Section4() {
           </div>
         </div>
   
-        <div className="w-full max-w-[300px] md:w-[300px] absolute bottom-0 transform -translate-x-1/2 md:translate-x-[20%] lg:translate-x-[55%] left-1/2 lg:w-1/3 z-20">
+        <div className="w-full max-w-[300px] md:w-[300px] xl:w-[450px] lg:max-w-[450px] lg:w-1/3 absolute bottom-0 transform -translate-x-1/2 md:translate-x-[20%] lg:translate-x-[55%] xl:translate-x-[40%] left-1/2 z-20">
           <img
             src={require(`../image/section6/gift.png`)}
             alt="gift card image"
