@@ -1,13 +1,13 @@
 export default function Section4() {
     return (
       <div className="relative bg-red-600 rounded-lg mb-20 mt-28 xl:mx-32 mx-10 sm:mx-14 lg:mx-24 flex justify-between">
-        <div className="px-14 pt-12 pb-7 z-10">
+        <div className="px-5 pt-5 md:px-14 md:pt-12 md:pb-7 z-10 pb-72 sm:pb-96">
           <div className="lg:max-w-md">
-            <h1 className="text-5xl font-bold tracking-tight text-white">
+            <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-tight text-white">
               Why You should buy gift cards?
             </h1>
           </div>
-          <div className="mt-8 text-white text-sm">
+          <div className="mt-8 text-white text-sm md:w-4/5 lg:w-full">
             <ul className="space-y-2">
               <li className="flex items-center gap-x-3">
                 <img
@@ -44,14 +44,14 @@ export default function Section4() {
           <div className="mt-5">
             <a
               href="#"
-              className="inline-block h-[49px] w-[140px] rounded-md bg-white text-center py-3 text-base font-semibold text-[#0B7077] shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="inline-block md:h-[49px] md:w-[140px] rounded-md bg-white text-center px-2 py-2 md:py-3 text-sm md:text-base font-semibold text-[#0B7077] shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               BUY NOW
             </a>
           </div>
         </div>
   
-        <div className="invisible lg:visible absolute bottom-0 right-0 -mr-6 lg:w-1/2 z-20">
+        <div className="w-full max-w-[300px] md:w-[300px] absolute bottom-0 transform -translate-x-1/2 md:translate-x-[20%] lg:translate-x-[55%] left-1/2 lg:w-1/3 z-20">
           <img
             src={require(`../image/section6/gift.png`)}
             alt="gift card image"
