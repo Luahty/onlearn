@@ -1,6 +1,6 @@
 export default function Section5() {
     return (
-        <div className="my-20 xl:mx-20 mx-10 sm:mx-14 grid gap-x-8 lg:max-w-none lg:grid-cols-2 lg:items-start">
+        <div className="my-10 md:my-25 xl:mx-20 mx-10 sm:mx-14 grid gap-x-8 lg:max-w-none lg:grid-cols-2 lg:items-start">
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:w-full lg:max-w-7xl lg:px-8 grid grid-cols-1 lg:flex lg:flex-row lg:items-center">
                 <div className="lg:-ml-12 max-w-full p-12 lg:sticky lg:top-4 lg:overflow-hidden">
                     <img

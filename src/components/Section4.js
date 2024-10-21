@@ -1,7 +1,6 @@
 export default function Section4() {
     return (
-
-        <div className="my-20 xl:mx-20 mx-10 sm:mx-14 grid max-w-3xl grid-cols-1 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:items-start">
+        <div className="my-10 md:my-25 xl:mx-20 mx-10 sm:mx-14 grid grid-cols-1 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:items-start">
             <div className="mb-5 lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                 <div className="lg:pr-4">
                     <div className="lg:max-w-lg">
@@ -13,7 +12,7 @@ export default function Section4() {
                 </div>
             </div>
             <div className="max-w-1/2 -mt-12 py-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden sm:mx-auto lg:mx-0">
-                <div className='flex flex-wrap w-full px-10 py-5 gap-5 justify-center bg-[#D2E6E4] rounded-3xl'>
+                <div className='flex flex-wrap md:flex-nowrap w-full px-10 py-5 gap-5 justify-center bg-[#D2E6E4] rounded-3xl'>
                     <img
                         alt=""
                         src={require(`../image/section4/card1.png`)}

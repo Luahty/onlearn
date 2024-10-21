@@ -1,6 +1,6 @@
 export default function Section1() {
     return (
-        <div className="bg-white">
+        <div className="bg-white mb-10 md:mb-20">
             <div className="mx-auto">
                 <div className="relative isolate overflow-hidden h-[600px] sm:h-[500px] md:h-[700px] bg-[#D2E6E4] px-6 pt-16 rounded-b-3xl sm:px-16 md:pt-24 lg:flex lg:px-20 lg:pt-0">
                     <div className="mx-auto max-w-sm sm:max-w-md md:max-w-2xl text-center mt-10 lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
