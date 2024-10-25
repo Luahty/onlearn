@@ -12,7 +12,7 @@ export default function Section5() {
                 <div className="lg:pr-4 ml-0 mt-10 lg:mt-0 lg:ml-10">
                     <div className="lg:max-w-lg">
                         <div className="bg-[#D4E1FF] text-center rounded-md w-[121px]">
-                            <p className="text-lg leading-7 text-[#0B7077]">Training</p>
+                            <p className="text-lg leading-7 text-accent">Training</p>
                         </div>
                         <h1 className="mt-5 text-2xl md:text-5xl font-bold tracking-tight text-[#FD661F]">
                             Staff training

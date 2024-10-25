@@ -9,7 +9,7 @@ export default function Section1() {
                                 Never stop learning
                             </div>
                         </div>
-                        <h1 className="text-3xl sm:text-5xl md:text-6xl lx:text-7xl font-semibold tracking-tight text-[#0B7077]">
+                        <h1 className="text-3xl sm:text-5xl md:text-6xl lx:text-7xl font-semibold tracking-tight text-accent">
                             Grow up your skills by online courses with Onlearning
                         </h1>
                         <div className="mt-10 flex flex-wrap items-center justify-center gap-6 lg:justify-start">

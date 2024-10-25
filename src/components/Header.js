@@ -70,12 +70,12 @@ export default function Header() {
                     <div
                         className={`${scrolled
                                 ? 'border-2 border-gray-500 hover:bg-teal-500 hover:border-teal-500'
-                                : 'text-[#0B7077] bg-white hover:bg-gray-100'
+                                : 'text-accent bg-white hover:bg-gray-100'
                             } w-28 h-12 xl:w-[135px] xl:h-[59px] my-auto rounded-md text-center lg:py-3 xl:py-4 text-base font-semibold leading-6`}
                     >
                         LOG IN
                     </div>
-                    <div className="w-28 h-12 xl:w-[135px] xl:h-[59px] my-auto ml-5 bg-[#0B7077] hover:bg-teal-500 rounded-md text-center lg:py-3 xl:py-4 text-base font-semibold leading-6 text-white">
+                    <div className="w-28 h-12 xl:w-[135px] xl:h-[59px] my-auto ml-5 bg-accent hover:bg-teal-500 rounded-md text-center lg:py-3 xl:py-4 text-base font-semibold leading-6 text-white">
                         SIGN UP
                     </div>
                 </div>

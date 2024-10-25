@@ -11,11 +11,11 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App font-raleway">
       <Header />
       <Section1 />
       {/* <Section2 /> */}
-      {/* <Section3 /> */}
+      <Section3 />
       <Section4 />
       <Section5 />
       <Section6 />

@@ -44,7 +44,7 @@ export default function Section4() {
           <div className="mt-5">
             <a
               href="#"
-              className="inline-block md:h-[49px] md:w-[140px] rounded-md bg-white text-center px-2 py-2 md:py-3 text-sm md:text-base font-semibold text-[#0B7077] shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="inline-block md:h-[49px] md:w-[140px] rounded-md bg-white text-center px-2 py-2 md:py-3 text-sm md:text-base font-semibold text-accent shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               BUY NOW
             </a>
