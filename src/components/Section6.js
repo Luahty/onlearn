@@ -3,7 +3,7 @@ export default function Section4() {
       <div className="my-10 md:my-25 relative bg-red-600 rounded-lg mb-20 mt-28 xl:mx-32 mx-10 sm:mx-14 lg:mx-24 flex justify-between">
         <div className="px-5 pt-5 md:px-14 md:pt-12 md:pb-7 z-10 pb-72 sm:pb-96">
           <div className="lg:max-w-md">
-            <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-tight text-white">
+            <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-tight text-white font-inter">
               Why You should buy gift cards?
             </h1>
           </div>

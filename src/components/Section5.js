@@ -14,7 +14,7 @@ export default function Section5() {
                         <div className="bg-[#D4E1FF] text-center rounded-md w-[121px]">
                             <p className="text-lg leading-7 text-accent">Training</p>
                         </div>
-                        <h1 className="mt-5 text-2xl md:text-5xl font-bold tracking-tight text-[#FD661F]">
+                        <h1 className="mt-5 text-2xl md:text-5xl font-bold tracking-tight text-[#FD661F] font-inter">
                             Staff training
                         </h1>
                     </div>

@@ -7,7 +7,7 @@ export default function Section4() {
                         <div className='bg-[#F5F5F5] text-center rounded-md w-[121px]'>
                             <p className="text-lg leading-7 text-accent">Benefits</p>
                         </div>
-                        <h1 className="mt-5 text-2xl md:text-5xl font-bold tracking-tight text-accent">Get Student ID card</h1>
+                        <h1 className="mt-5 text-2xl md:text-5xl font-bold tracking-tight text-accent font-inter">Get Student ID card</h1>
                     </div>
                 </div>
             </div>

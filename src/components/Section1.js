@@ -20,14 +20,14 @@ export default function Section1() {
                                 EXPLORE PATH
                             </a>
                             <div className="">
-                                <img className="md:h-[59px]" src={require(`../image/review.png`)} />
+                                <img className="md:h-[59px]" src={require(`../image/section1/review.png`)} />
                             </div>
                         </div>
                     </div>
                     <div className="relative invisible lg:visible w-2/5 h-80 xl:ml-28">
                         <img
                             alt="OnLearn"
-                            src={require(`../image/home.png`)}
+                            src={require(`../image/section1/home.png`)}
                             className="mt-12 md:mt-20 top-0 xl:h-[623.82px] max-w-none"
                         />
                     </div>
@@ -36,7 +36,7 @@ export default function Section1() {
                     <div className="flex justify-center p-5 md:p-10 rounded-full bg-[#D2E6E4] h-auto w-[170px] md:w-[274px] ">
                         <img
                             alt="OnLearn"
-                            src={require(`../image/play.png`)}
+                            src={require(`../image/section1/play.png`)}
                             className="md:h-[201px] h-auto w-auto z-10"
                         />
 
