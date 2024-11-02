@@ -11,7 +11,6 @@ import SignUpIndex from './component/views/signup.view';
 import "./component/assets/css/bootstrap.min.css";
 import "./component/assets/css/now-ui-kit.css";
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
