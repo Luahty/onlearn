@@ -1,0 +1,32 @@
+.card{
+    width: 15rem;
+    margin-bottom: 50px;
+    margin-left: 200px;
+}
+.card-img-top{
+    height: 200px;
+    width: 200px;
+    padding-left: 25px;
+}
+.left{
+    width: 15rem;
+    margin-bottom: 50px;
+}
+.row{
+    margin: 0px;
+}
+.card-text {
+    color:#000 ;
+    font-weight: bold;
+}
+.card-text a:hover{
+    color: #ff0404;
+    
+}
+.card-text a{
+    color: #000;
+    text-decoration: none;
+}
+.card-body{
+    background-color: #ecf0f1;
+}
