@@ -14,7 +14,7 @@ const IndexSignUp = () => {
     };
 
     // States for image handling
-    const [imageSrc, setImageSrc] = useState('https://placehold.co/400x600');
+    const [imageSrc, setImageSrc] = useState(require('../assets/img/enter.png'));
     const [altText, setAltText] = useState('Default image for signup');
 
     // Function to change image based on input focus

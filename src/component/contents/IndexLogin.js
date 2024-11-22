@@ -9,21 +9,25 @@ import './Css/login.css';
 const IndexLogin = () => {
   const [isForgotPassword, setIsForgotPassword] = useState(false);
   const [isChangePass, setIsChangePass] = useState(false);
-  const [imageSrc, setImageSrc] = useState('https://storage.googleapis.com/a1aa/image/fxmnxvNeVilmepCLGX86ezBg6li15P8KIGuQfkfkkjjnmeL0JA.jpg');
+  const [imageSrc, setImageSrc] = useState(require('../assets/img/scc.png'));
   const [altText, setAltText] = useState('Hand holding a smartphone with a security lock and checkmark');
 
   //đổi hình ảnh qua các thanh input
   const changeImage = (action) => {
     if (action === 'email') {
-      setImageSrc('https://placehold.co/300x500?text=Image+1');
+      setImageSrc(require('../assets/img/email.jpg'));
       setAltText('Image 1 description');
     } else if (action === 'password') {
-      setImageSrc('https://placehold.co/300x500?text=Image+2');
+      setImageSrc(require('../assets/img/pass.jpg'));
       setAltText('Image 2 description');
     } else if (action === 'forgot') {
-      setImageSrc('https://placehold.co/300x500?text=Image+3');
+      setImageSrc(require('../assets/img/scrt.png'));
+      setAltText('Image 3 description');
+    } else if (action === 'enter') {
+      setImageSrc(require('../assets/img/scc.png'));
       setAltText('Image 3 description');
     }
+    
   };
 
   return (

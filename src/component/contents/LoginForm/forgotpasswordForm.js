@@ -12,7 +12,7 @@ const ForgotPasswordForm = ({ onBackToLoginClick, onClick, onChangeImage }) => {
       <div
         className="back-to-login"
         onClick={onBackToLoginClick}
-        onFocus={() => onChangeImage("email")}
+        onFocus={() => onChangeImage("enter")}
       >
         <i className="fas fa-arrow-left"></i> Back to login
       </div>
@@ -31,7 +31,7 @@ const ForgotPasswordForm = ({ onBackToLoginClick, onClick, onChangeImage }) => {
             value={forgotEmailValue}
             onFocus={() => {
               setForgotEmailFocused(true);
-              onChangeImage("email");
+              
             }}
             onBlur={() => setForgotEmailFocused(false)}
             onChange={(e) => setForgotEmailValue(e.target.value)}

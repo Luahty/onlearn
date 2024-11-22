@@ -27,13 +27,13 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-  
+
 }
 
 .right img {
-
-
-  border-radius: 10px;
+  background-color: #45454542;
+  height: 650px;
+  border-radius: 15px;
 }
 
 .logo-login {

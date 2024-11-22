@@ -72,7 +72,7 @@ const ChangePasswordForm = ({
             value={newforgotValue}
             onFocus={() => {
               setNewforgotFocused(true);
-              onChangeImage("email");
+              onChangeImage("forgot");
             }}
             onBlur={() => setNewforgotFocused(false)}
             onChange={handleNewPasswordChange}
@@ -131,7 +131,8 @@ const ChangePasswordForm = ({
             value={checkforgotValue}
             onFocus={() => {
               setCheckforgotFocused(true);
-              onChangeImage("email");
+              onChangeImage("forgot");
+              
             }}
             onBlur={() => setCheckforgotFocused(false)}
             onChange={handleCheckPasswordChange}
