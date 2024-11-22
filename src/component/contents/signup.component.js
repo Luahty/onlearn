@@ -53,12 +53,11 @@ const IndexSignUp = () => {
             <div className="form-section">
                 <div className="logo">
                     <img
-                        src="https://storage.googleapis.com/a1aa/image/hmzcZP9odsIULFm8g3yfqfoio5gubKBj3KtevX0kApQjfPlOB.jpg"
+                        src={require(`./image/logo.png`)}
                         alt="Your Logo"
-                        width="40"
+                        width="160"
                         height="40"
                     />
-                    <span>Logo</span>
                 </div>
                 <h2>Sign up</h2>
                 <p>Let's get you all set up so you can access your personal account.</p>

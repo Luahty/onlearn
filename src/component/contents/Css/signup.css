@@ -32,12 +32,12 @@
 .form-section .logo {
     display: flex;
     margin-bottom: 10px;
-    margin: -15px 0px 10px 400px;
+    margin: -15px 0px 10px 350px;
 }
 
 .form-section .logo img {
     height: 40px;
-    margin-right: 10px;
+    margin-right: -10px;
 }
 
 .form-section h2 {

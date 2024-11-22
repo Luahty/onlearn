@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 
 const LoginForm = ({ onForgotPasswordClick, onChangeImage }) => {
-  
   // States for Login form
   const [emailFocused, setEmailFocused] = useState(false);
   const [passwordFocused, setPasswordFocused] = useState(false);
@@ -12,8 +11,12 @@ const LoginForm = ({ onForgotPasswordClick, onChangeImage }) => {
   return (
     <div>
       <div className="logo-login">
-        <i className="fas fa-brain"></i>
-        <span>20/10</span>
+        <img
+          src={require(`../image/logo.png`)}
+          alt="Your Logo"
+          width="160"
+          height="40"
+        />
       </div>
       <h2>Login</h2>
       <p>Login to access your travelwise account</p>
