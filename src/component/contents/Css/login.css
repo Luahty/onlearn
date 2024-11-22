@@ -1,4 +1,4 @@
-.container {
+.container-L-S {
   margin-top: 70px;
   background-color: #ffffff;
   border-radius: 20px;
@@ -8,6 +8,13 @@
   overflow: hidden;
   height: 750px; 
   transition: transform 0.9s ease-in-out; /* Rotation animation */
+}
+.container-L-S {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto
 }
 
 .rotating {
@@ -25,7 +32,7 @@
 .right {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
   width: 50%;
 
 }
@@ -308,7 +315,7 @@ input[type="text"]:focus {
   margin-left: .25em;
 }
 @media (max-width: 768px) {
-  .container {
+  .container-L-S {
       flex-direction: column;
       width: 100%;
       height: auto;
@@ -489,3 +496,28 @@ html {
 
 
 
+
+
+@media (min-width:576px) {
+  .container-L-S {
+      max-width: 540px
+  }
+}
+
+@media (min-width:768px) {
+  .container-L-S {
+      max-width: 720px
+  }
+}
+
+@media (min-width:992px) {
+  .container-L-S {
+      max-width: 960px
+  }
+}
+
+@media (min-width:1200px) {
+  .container-L-S {
+      max-width: 1140px
+  }
+}

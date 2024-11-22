@@ -20,7 +20,7 @@ const ForgotPasswordForm = ({ onBackToLoginClick, onClick, onChangeImage }) => {
       <p>Enter your email below to recover your password</p>
       <form>
         <div
-          className={`input-container ${
+          className={`input-container-L-S ${
             forgotEmailFocused || forgotEmailValue ? "focused" : ""
           }`}
         >

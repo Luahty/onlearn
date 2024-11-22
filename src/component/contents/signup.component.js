@@ -41,7 +41,7 @@ const IndexSignUp = () => {
     };
 
     return (
-        <div className="container">
+        <div className="container-L-S">
             <div className="left-section">
                 <img
                     src={imageSrc}
@@ -141,7 +141,7 @@ const IndexSignUp = () => {
                             Already have an account? <a href="/login">Login</a>
                         </p>
                     </div>
-                    <div class="signup-container">
+                    <div class="signup-container-L-S">
                         <div class="divider">Login with</div>
                     </div>
                     <div className="social-signup">

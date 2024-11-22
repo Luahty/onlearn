@@ -31,7 +31,7 @@ const IndexLogin = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-L-S">
       <div className="left">
         {isForgotPassword ? (
           <ForgotPasswordForm

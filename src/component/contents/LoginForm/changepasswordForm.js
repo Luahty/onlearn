@@ -61,7 +61,7 @@ const ChangePasswordForm = ({
       <p>An authentication code has been sent to your email.</p>
       <form>
         <div
-          className={`input-container iChange ${
+          className={`input-container-L-S iChange ${
             newforgotFocused || newforgotValue ? "focused" : ""
           }`}
         >
@@ -120,7 +120,7 @@ const ChangePasswordForm = ({
         </div>
 
         <div
-          className={`input-container iChangeCheck ${
+          className={`input-container-L-S iChangeCheck ${
             checkforgotFocused || checkforgotValue ? "focused" : ""
           } ${passwordMatchError ? "error-border" : "success-border"}`}
         >

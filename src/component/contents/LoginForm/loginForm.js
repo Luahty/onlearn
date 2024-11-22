@@ -22,7 +22,7 @@ const LoginForm = ({ onForgotPasswordClick, onChangeImage }) => {
       <p>Login to access your travelwise account</p>
       <form>
         <div
-          className={`input-container ${
+          className={`input-container-L-S ${
             emailFocused || emailValue ? "focused" : ""
           }`}
         >
@@ -40,7 +40,7 @@ const LoginForm = ({ onForgotPasswordClick, onChangeImage }) => {
           />
         </div>
         <div
-          className={`input-container ${
+          className={`input-container-L-S ${
             passwordFocused || passwordValue ? "focused" : ""
           }`}
         >
@@ -76,7 +76,7 @@ const LoginForm = ({ onForgotPasswordClick, onChangeImage }) => {
       <div className="signup">
         Don't have an account? <a href="/signup">Sign up</a>
       </div>
-      <div class="login-container">
+      <div class="login-container-L-S">
         <div class="divider">Login with</div>
       </div>
       <div className="social-login">

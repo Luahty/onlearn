@@ -8,14 +8,13 @@ import SignUpIndex from './component/views/signup.view';
 
 // style
 
-import "./component/assets/css/bootstrap.min.css";
 import "./component/assets/css/now-ui-kit.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <BrowserRouter >
-    <Routes>
+    <Routes> 
       <Route path="/" element={<LoginIndex />} />
       <Route path="/login" element={<LoginIndex />} />
       <Route path="/signup" element={<SignUpIndex />} />
