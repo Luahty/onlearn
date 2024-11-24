@@ -12,7 +12,7 @@ const Header = () => {
       <div className="info">
         <h1>Coffee Store</h1>
         <p>Odessa, ON</p>
-        <p>
+        <p className="direction">
           <i className="fas fa-map-marker-alt"></i> Location (Pick Up): 3 McAlpine
           St, Toronto, ON, CA, M5R 3T5{" "}
           <a href="#" className="direction-link">
@@ -25,7 +25,7 @@ const Header = () => {
           src="https://storage.googleapis.com/a1aa/image/azSqVlGXpeXf1kiezZZeVwV33ixdm3Yg8NbQCUnZHkGAbbQPB.jpg"
           alt="Owner"
         />
-        <p>Owned by Lola and Coco</p>
+        <p className="owner-name">Owned by Lola and Coco</p>
       </div>
     </div>
   );
