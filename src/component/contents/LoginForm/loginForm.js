@@ -10,13 +10,14 @@ const LoginForm = ({ onForgotPasswordClick, onChangeImage }) => {
 
   return (
     <div>
-      <div className="logo-login">
+      <div className="logo-login"> 
         <img
           src={require(`../image/logo.png`)}
           alt="Your Logo"
-          width="160"
-          height="40"
+          width="290"
+          height="70"
         />
+        <a href="/product"><button type="">Go To Product List</button></a>
       </div>
       <h2>Login</h2>
       <p>Login to access your travelwise account</p>
@@ -29,7 +30,7 @@ const LoginForm = ({ onForgotPasswordClick, onChangeImage }) => {
           <label htmlFor="email">Email</label>
           <input
             id="email"
-            type="email"
+            type="email" 
             value={emailValue}
             onFocus={() => {
               setEmailFocused(true);

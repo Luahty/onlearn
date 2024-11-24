@@ -1,11 +1,11 @@
 import React from "react";
 
-import IndexSignUp from "../contents/signup.component";
+import IndexProduct from "../contents/IndexProduct";
 
 //import Footer from "../Footers/footer.component";
 // import ProductPage from "../Content/shop.component";
 
-function SignUpIndex() {
+function ProductIndex() {
 React.useEffect(() => {
         document.body.classList.add("index-page");
         document.body.classList.add("sidebar-collapse");
@@ -19,8 +19,8 @@ React.useEffect(() => {
     });
     return (
         <>
-            <IndexSignUp />
-            <div className="wrapper"> 
+            <IndexProduct />
+            <div className="wrapper">
                 <div className="main">
                     {/* <ProductPage /> */}
                 </div>
@@ -30,4 +30,4 @@ React.useEffect(() => {
     );
 }
 
-export default SignUpIndex;
+export default ProductIndex;

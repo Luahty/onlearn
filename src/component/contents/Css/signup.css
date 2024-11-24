@@ -43,12 +43,12 @@
 .form-section .logo {
     display: flex;
     margin-bottom: 10px;
-    margin: -15px 0px 10px 350px;
+    margin: -15px 0px 10px -50px;
 }
 
 .form-section .logo img {
-    height: 40px;
-    margin-right: -10px;
+    height: 70px;
+    width: 290px !important;
 }
 
 .form-section h2 {
@@ -394,7 +394,7 @@
   }
 }
 
-@media (min-width:992px) {
+@media (min-width:992px) { 
   .container-L-S {
       max-width: 960px
   }

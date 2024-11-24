@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Css/signup.css'; 
-
+ 
 const IndexSignUp = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
@@ -48,15 +48,15 @@ const IndexSignUp = () => {
                     alt={altText}
                     height="600"
                     width="500"
-                />
+                /> 
             </div>
             <div className="form-section">
                 <div className="logo">
                     <img
                         src={require(`./image/logo.png`)}
                         alt="Your Logo"
-                        width="160"
-                        height="40"
+                        width="290"
+                        height="70"
                     />
                 </div>
                 <h2>Sign up</h2>
