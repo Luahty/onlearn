@@ -157,6 +157,46 @@ body {
 .products {
     width: 80%;
 }
+
+.products .grid .product {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease; /* Thêm hiệu ứng mượt */
+}
+
+.products .grid .product:hover {
+    transform: scale(1.02); /* Thu nhỏ toàn bộ sản phẩm một chút */
+}
+
+.products .grid .product img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Hiệu ứng mượt khi thay đổi kích thước */
+}
+
+.products .grid .product:hover img {
+    transform: scale(1); /* Thu nhỏ hình ảnh */
+}
+
+
+.product .icon-heart {
+    position: absolute;
+    margin-left: 360px;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: #ddd;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    color: rgba(255, 105, 180, 0.72);
+}
 .products .controls {
     display: flex;
     justify-content: space-between;
@@ -188,7 +228,7 @@ body {
 }
 .products .grid .product img {
     width: 100%;
-    height: 200px;
+    height: 360px;
     object-fit: cover;
 }
 .products .grid .product .details {

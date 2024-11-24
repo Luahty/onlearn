@@ -4,6 +4,7 @@ import '../Css/product.css';
 const ProductCard = ({ product }) => {
   return (
     <div className="product">
+      <i className="far fa-heart icon-heart"></i>
       <img src={product.image} alt={product.name} />
       <div className="details">
         <h4>{product.name}</h4>
