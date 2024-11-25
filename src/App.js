@@ -1,27 +1,30 @@
-import logo from './logo.svg';
+import LoginIndex from './component/views/login.view';
+import ProductIndex from './component/views/product.view';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SignUpIndex from './component/views/signup.view';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer';
 import Header from './components/Header';
-import Section1 from './components/Section1';
-import Section2 from './components/Section2';
-import Section3 from './components/Section3';
-import Section4 from './components/Section4';
-import Section5 from './components/Section5';
-import Section6 from './components/Section6';
-import Section7 from './components/Section7';
-import Footer from './components/Footer'
+import Home from './pages/HomePage';
+import ProductDetail from './pages/ProductDetail';
+
+
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Header />
-      <Section1 />
-      {/* <Section2 /> */}
-      {/* <Section3 /> */}
-      <Section4 />
-      <Section5 />
-      <Section6 />
-      {/* <Section7 /> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product" element={<ProductIndex />} />
+        <Route path="/productdetail/id" element={<ProductDetail />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<LoginIndex />} />
+        <Route path="/sign" element={<SignUpIndex />} />
+
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 

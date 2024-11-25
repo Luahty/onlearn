@@ -5,7 +5,7 @@ import Section3 from '../components/Home/Section3';
 import Section4 from '../components/Home/Section4';
 import Section5 from '../components/Home/Section5';
 import Section6 from '../components/Home/Section6';
-// import Section7 from './components/Home/Section7';
+import Section7 from '../components/Home/Section7';
 
 
 function Home() {
@@ -17,7 +17,7 @@ function Home() {
             <Section4 />
             <Section5 />
             <Section6 />
-            {/* <Section7 /> */}
+            <Section7 />
         </div>
     );
 }
