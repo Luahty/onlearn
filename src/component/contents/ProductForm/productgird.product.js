@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ProductCard from "./productcard.product";
 import '../Css/product.css'; 
 
@@ -69,20 +69,35 @@ const products = [
       },
   // Add other products here...
 ];
-
 const ProductGrid = () => {
+  const [showImagesOnly, setShowImagesOnly] = useState(false);
+
+  const toggleShowImagesOnly = () => {
+    setShowImagesOnly((prev) => !prev);
+  };
+
   return (
     <div className="products">
       <div className="controls">
-        <span>Show all products ({products.length})</span>
-        <span className="center-text">Show image only</span>
-        <select>
-          <option>Bestselling</option>
-        </select>
+        <span className="products-count">Show all products ({products.length})</span>
+        <div className="toggle-container">
+          <span>Show image only</span>
+          <label className="switch">
+            <input type="checkbox" onChange={toggleShowImagesOnly} />
+            <span className="slider round"></span>
+          </label>
+        </div>
+        <div className="sort-by">
+          <span>Sort by:</span>
+          <select className="dropdown">
+            <option>Bestselling</option>
+            {/* Add more sorting options if needed */}
+          </select>
+        </div>
       </div>
       <div className="grid">
         {products.map((product, index) => (
-          <ProductCard key={index} product={product} />
+          <ProductCard key={index} product={product} showImagesOnly={showImagesOnly} />
         ))}
       </div>
     </div>
