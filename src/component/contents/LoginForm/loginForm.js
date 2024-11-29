@@ -22,42 +22,45 @@ const LoginForm = ({ onForgotPasswordClick, onChangeImage }) => {
       <h2>Login</h2>
       <p>Login to access your travelwise account</p>
       <form>
-        <div
-          className={`input-container-L-S ${
-            emailFocused || emailValue ? "focused" : ""
-          }`}
-        >
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            type="email" 
-            value={emailValue}
-            onFocus={() => {
-              setEmailFocused(true);
-              onChangeImage("email");
-            }}
-            onBlur={() => setEmailFocused(false)}
-            onChange={(e) => setEmailValue(e.target.value)}
-          />
-        </div>
-        <div
-          className={`input-container-L-S ${
-            passwordFocused || passwordValue ? "focused" : ""
-          }`}
-        >
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            type="password"
-            value={passwordValue}
-            onFocus={() => {
-              setPasswordFocused(true);
-              onChangeImage("password");
-            }}
-            onBlur={() => setPasswordFocused(false)}
-            onChange={(e) => setPasswordValue(e.target.value)}
-          />
-        </div>
+      <div
+  className={`input-container-L-S ${
+    emailFocused || emailValue ? "focused" : ""
+  }`}
+>
+  <input
+    id="email"
+    type="email"
+    placeholder=""
+    value={emailValue}
+    onFocus={() => {
+      setEmailFocused(true);
+      onChangeImage("email");
+    }}
+    onBlur={() => setEmailFocused(false)}
+    onChange={(e) => setEmailValue(e.target.value)}
+  />
+  <label htmlFor="email">Email</label>
+</div>
+<div
+  className={`input-container-L-S ${
+    passwordFocused || passwordValue ? "focused" : ""
+  }`}
+>
+  <input
+    id="password"
+    type="password"
+    placeholder=""
+    value={passwordValue}
+    onFocus={() => {
+      setPasswordFocused(true);
+      onChangeImage("password");
+    }}
+    onBlur={() => setPasswordFocused(false)}
+    onChange={(e) => setPasswordValue(e.target.value)}
+  />
+  <label htmlFor="password">Password</label>
+</div>
+
         <div className="remember-me">
           <input id="remember" type="checkbox" />
           <label htmlFor="remember">Remember me</label>

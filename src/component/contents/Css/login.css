@@ -17,6 +17,45 @@
   margin-left: auto
 }
 
+.input-container-L-S {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input-container-L-S label {
+  position: absolute;
+  top: 35%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-container-L-S input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+.input-container-L-S.focused label,
+.input-container-L-S input:not(:placeholder-shown) + label {
+  top: -0.2px;
+  background-color: white;
+  padding: 5px;
+  font-size: 12px;
+  color: #333;
+}
+
+.input-container-L-S input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+
 .rotating {
   transform: rotateY(150deg); /* Rotation effect */
 }

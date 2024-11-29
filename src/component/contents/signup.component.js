@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Css/signup.css";
 
 const IndexSignUp = () => {
@@ -40,6 +40,22 @@ const IndexSignUp = () => {
     }
   };
 
+  // State and logic for countdown timer
+  const [countdown, setCountdown] = useState(0);
+
+  useEffect(() => {
+    let timer;
+    if (countdown > 0) {
+      timer = setTimeout(() => setCountdown(countdown - 1), 1000);
+    }
+    return () => clearTimeout(timer);
+  }, [countdown]);
+
+  const handleSendCode = () => {
+    setCountdown(60); // Start countdown at 60 seconds
+    // Add code for sending the verification code here
+  };
+
   return (
     <div className="container-L-S">
       <div className="left-section">
@@ -52,12 +68,12 @@ const IndexSignUp = () => {
             alt="Your Logo"
             width="290"
             height="70"
-          />
+          /> 
         </div>
         <h2>Sign up</h2>
         <p>Let's get you all set up so you can access your personal account.</p>
         <form>
-        <div className="form-group half-width ip-left">
+          <div className="form-group half-width ip-left">
             <input
               id="first-name"
               placeholder=" "
@@ -129,12 +145,17 @@ const IndexSignUp = () => {
               className="verify-code"
               id="confirm-password"
               placeholder=" "
-              type={confirmPasswordVisible ? "text" : "password"}
+              type="text"
               onFocus={() => changeImage("confirmPassword")}
             />
             <label htmlFor="confirm-password">Verify Code</label>
-            <button className="submit-btn verify-code-btn" type="submit">
-              Send code
+            <button
+              className="submit-btn verify-code-btn"
+              type="button"
+              onClick={handleSendCode}
+              disabled={countdown > 0}
+            >
+              {countdown > 0 ? `Resend in ${countdown}s` : "Send code"}
             </button>
           </div>
 
@@ -157,28 +178,28 @@ const IndexSignUp = () => {
               Already have an account? <a href="/login">Login</a>
             </p>
           </div>
-          <div class="signup-container-L-S">
-            <div class="divider">Login with</div>
+          <div className="signup-container-L-S">
+            <div className="divider">Login with</div>
           </div>
           <div className="social-signup">
-            <button class="btn-lgw">
-              <a href="#" class="button btn-fb">
+            <button className="btn-lgw">
+              <a href="#" className="button btn-fb">
                 <svg>
                   <rect x="0" y="0" fill="none" width="100%" height="100%" />
                 </svg>
                 <i className="fab fa-facebook-f"></i> Facebook
               </a>
             </button>
-            <button class="btn-lgw">
-              <a href="#" class="button btn-gg">
+            <button className="btn-lgw">
+              <a href="#" className="button btn-gg">
                 <svg>
                   <rect x="0" y="0" fill="none" width="100%" height="100%" />
                 </svg>
                 <i className="fab fa-google"></i> Google
               </a>
             </button>
-            <button class="btn-lgw">
-              <a href="#" class="button btn-ap">
+            <button className="btn-lgw">
+              <a href="#" className="button btn-ap">
                 <svg>
                   <rect x="0" y="0" fill="none" width="100%" height="100%" />
                 </svg>
