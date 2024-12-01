@@ -55,7 +55,6 @@
   outline: none;
 }
 
-
 .rotating {
   transform: rotateY(150deg); /* Rotation effect */
 }
@@ -340,7 +339,7 @@ input[type="text"]:focus {
   display: flex;
   align-items: center;
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0 !important;
 }
 .divider::before, .divider::after {
   content: '';

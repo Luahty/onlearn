@@ -11,7 +11,7 @@ import PruductIndex from './component/views/product.view';
 // style
 
 import "./component/assets/css/now-ui-kit.css";
-
+ 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -20,6 +20,9 @@ root.render(
       <Route path="/" element={<LoginIndex />} />
       <Route path="/login" element={<LoginIndex />} />
       <Route path="/signup" element={<SignUpIndex />} />
+
+      <Route path="/forgotpass" element={<LoginIndex isForgotPassword={true} />} /> {/* Forgot Password */}
+
       
       <Route path="/product" element={<PruductIndex />} />
 

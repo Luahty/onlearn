@@ -1,33 +1,50 @@
-// IndexLogin.js
-import React, { useState } from 'react';
-import LoginForm from './LoginForm/loginForm.js';
-import ForgotPasswordForm from './LoginForm/forgotpasswordForm.js';
-import ChangePasswordForm from './LoginForm/changepasswordForm.js';
-import './Css/login.css';
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import LoginForm from "./LoginForm/loginForm.js";
+import ForgotPasswordForm from "./LoginForm/forgotpasswordForm.js";
+import ChangePasswordForm from "./LoginForm/changepasswordForm.js";
+import "./Css/login.css";
 
-
-const IndexLogin = () => {
-  const [isForgotPassword, setIsForgotPassword] = useState(false);
+const IndexLogin = ({ isForgotPassword: defaultForgotPassword = false }) => {
+  const [isForgotPassword, setIsForgotPassword] = useState(defaultForgotPassword);
   const [isChangePass, setIsChangePass] = useState(false);
-  const [imageSrc, setImageSrc] = useState(require('../assets/img/scc.png'));
-  const [altText, setAltText] = useState('Hand holding a smartphone with a security lock and checkmark');
+  const [imageSrc, setImageSrc] = useState(require("../assets/img/scc.png"));
+  const [altText, setAltText] = useState(
+    "Hand holding a smartphone with a security lock and checkmark"
+  );
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  //đổi hình ảnh qua các thanh input
+  // Đổi hình ảnh qua các thanh input
   const changeImage = (action) => {
-    if (action === 'email') {
-      setImageSrc(require('../assets/img/email.jpg'));
-      setAltText('Image 1 description');
-    } else if (action === 'password') {
-      setImageSrc(require('../assets/img/pass.jpg'));
-      setAltText('Image 2 description');
-    } else if (action === 'forgot') {
-      setImageSrc(require('../assets/img/scrt.png'));
-      setAltText('Image 3 description');
-    } else if (action === 'enter') {
-      setImageSrc(require('../assets/img/scc.png'));
-      setAltText('Image 3 description');
+    if (action === "email") {
+      setImageSrc(require("../assets/img/email.jpg"));
+      setAltText("Image 1 description");
+    } else if (action === "password") {
+      setImageSrc(require("../assets/img/pass.jpg"));
+      setAltText("Image 2 description");
+    } else if (action === "forgot") {
+      setImageSrc(require("../assets/img/scrt.png"));
+      setAltText("Image 3 description");
+    } else if (action === "enter") {
+      setImageSrc(require("../assets/img/scc.png"));
+      setAltText("Image 3 description");
     }
-    
+  };
+
+  // Điều chỉnh trạng thái dựa trên URL
+  useEffect(() => {
+    if (location.pathname === "/forgotpass") {
+      setIsForgotPassword(true);
+    } else if (location.pathname === "/") {
+      setIsForgotPassword(false);
+    }
+  }, [location.pathname]);
+
+  // Hàm chuyển hướng đến trang Forgot Password
+  const handleForgotPasswordClick = () => {
+    setIsForgotPassword(true);
+    navigate("/forgotpass"); // Chuyển hướng URL
   };
 
   return (
@@ -35,7 +52,10 @@ const IndexLogin = () => {
       <div className="left">
         {isForgotPassword ? (
           <ForgotPasswordForm
-            onBackToLoginClick={() => setIsForgotPassword(false)}
+            onBackToLoginClick={() => {
+              setIsForgotPassword(false);
+              navigate("/"); // Quay lại trang chính
+            }}
             onClick={() => setIsChangePass(true)}
             onChangeImage={changeImage}
           />
@@ -46,17 +66,13 @@ const IndexLogin = () => {
           />
         ) : (
           <LoginForm
-            onForgotPasswordClick={() => setIsForgotPassword(true)}
+            onForgotPasswordClick={handleForgotPasswordClick} // Gọi hàm chuyển hướng
             onChangeImage={changeImage}
           />
         )}
       </div>
       <div className="right">
-        <img 
-          src={imageSrc} 
-          alt={altText}
-          height="600"
-          width="500" />
+        <img src={imageSrc} alt={altText} height="600" width="500" />
       </div>
     </div>
   );

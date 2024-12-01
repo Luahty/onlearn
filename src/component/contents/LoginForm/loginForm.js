@@ -67,8 +67,8 @@ const LoginForm = ({ onForgotPasswordClick, onChangeImage }) => {
         </div>
         <a
           className="forgot-password"
-          href="#"
-          onClick={onForgotPasswordClick}
+          href=""
+          onClick={onForgotPasswordClick} 
           onFocus={() => onChangeImage("forgot")}
         >
           Forgot Password?

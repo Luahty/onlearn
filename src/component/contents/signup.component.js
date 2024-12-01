@@ -56,6 +56,123 @@ const IndexSignUp = () => {
     // Add code for sending the verification code here
   };
 
+// State for form values and error messages
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const [errors, setErrors] = useState({});
+  // Handle input changes
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [id]: value }));
+
+    // Validate email live as user types
+    if (id === "email") {
+      validateEmail(value);
+    }
+    if (id === "phone") {
+      validatePhone(value);
+    }
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email && !emailRegex.test(email)) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        email: "Please enter a valid email address.",
+      }));
+    } else {
+      setErrors((prevErrors) => {
+        const { email, ...rest } = prevErrors;
+        return rest;
+      });
+    }
+  };
+  const validatePhone = (phone) => {
+    const phoneRegex = /^[0-9]{10,15}$/; // Accepts 10 to 15 digits
+    if (phone && !phoneRegex.test(phone)) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        phone: "Please enter a valid (10-15 digits).",
+      }));
+    } else {
+      setErrors((prevErrors) => {
+        const { phone, ...rest } = prevErrors;
+        return rest;
+      });
+    }
+  };
+  
+  // Validate a field when it loses focus
+  const validateField = (field) => {
+    if (!formData[field]) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        [field]: `${field} is required.`,
+      }));
+    } else {
+      setErrors((prevErrors) => {
+        const { [field]: removedError, ...rest } = prevErrors;
+        return rest;
+      });
+    }
+  };
+
+  // Other states...
+  const [checkboxChecked, setCheckboxChecked] = useState(false);
+  const [checkboxError, setCheckboxError] = useState(false);
+
+  const handleCheckboxChange = (e) => {
+    setCheckboxChecked(e.target.checked);
+    setCheckboxError(false); // Clear error when checked
+  };
+
+  // Validate all fields on submit
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent form submission
+    const newErrors = {};
+
+    // Check checkbox state
+    if (!checkboxChecked) {
+      setCheckboxError(true);
+      return; // Stop submission if checkbox is not checked
+    }
+    
+    // Check for empty fields
+    for (const field in formData) {
+      if (!formData[field]) {
+        newErrors[field] = `${field} is required.`;
+      }
+    }
+
+    if (Object.keys(newErrors).length === 0 && checkboxChecked) {
+      console.log("Form submitted successfully:", formData);
+      // Add your form submission logic here
+    }
+
+    // Check if passwords match
+    if (formData.password && formData.confirmPassword && formData.password !== formData.confirmPassword) {
+      newErrors.confirmPassword = "Passwords do not match.";
+    }
+
+    setErrors(newErrors);
+
+    // If there are no errors, proceed with form submission logic
+    if (Object.keys(newErrors).length === 0) {
+      console.log("Form submitted successfully:", formData);
+      // Add your form submission logic here
+    }
+    // Re-validate email on submit
+  };
+
+
   return (
     <div className="container-L-S">
       <div className="left-section">
@@ -73,48 +190,75 @@ const IndexSignUp = () => {
         <h2>Sign up</h2>
         <p>Let's get you all set up so you can access your personal account.</p>
         <form>
-          <div className="form-group half-width ip-left">
+        <div className="form-group half-width ip-left">
             <input
-              id="first-name"
+              id="firstName"
               placeholder=" "
               type="text"
+              value={formData.firstName}
+              onChange={handleInputChange}
               onFocus={() => changeImage("firstName")}
+              onBlur={() => validateField("firstName")}
             />
-            <label htmlFor="first-name">First Name</label>
+            <label htmlFor="firstName">First Name</label>
+            {errors.firstName && (
+              <small className="error-message">{errors.firstName}</small>
+            )}
           </div>
           <div className="form-group half-width">
             <input
-              id="last-name"
+              id="lastName"
               placeholder=" "
               type="text"
+              value={formData.lastName}
+              onChange={handleInputChange}
               onFocus={() => changeImage("lastName")}
+              onBlur={() => validateField("lastName")}
             />
-            <label htmlFor="last-name">Last Name</label>
+            <label htmlFor="lastName">Last Name</label>
+            {errors.lastName && (
+              <small className="error-message">{errors.lastName}</small>
+            )}
           </div>
           <div className="form-group half-width ip-left">
             <input
               id="email"
               placeholder=" "
               type="email"
+              value={formData.email}
+              onChange={handleInputChange}
               onFocus={() => changeImage("email")}
+              onBlur={() => validateField("email")}
             />
             <label htmlFor="email">Email</label>
+            {errors.email && (
+              <small className="error-message">{errors.email}</small>
+            )}
           </div>
           <div className="form-group half-width">
             <input
               id="phone"
               placeholder=" "
               type="text"
+              value={formData.phone}
+              onChange={handleInputChange}
               onFocus={() => changeImage("phone")}
+              onBlur={() => validateField("phone")}
             />
             <label htmlFor="phone">Phone Number</label>
+            {errors.phone && (
+              <small className="error-message">{errors.phone}</small>
+            )}
           </div>
           <div className="form-group password-toggle">
             <input
               id="password"
               placeholder=" "
               type={passwordVisible ? "text" : "password"}
+              value={formData.password}
+              onChange={handleInputChange}
               onFocus={() => changeImage("password")}
+              onBlur={() => validateField("password")}
             />
             <label htmlFor="password">Password</label>
             <i
@@ -123,21 +267,30 @@ const IndexSignUp = () => {
               } toggle-icon`}
               onClick={() => togglePasswordVisibility("password")}
             ></i>
+            {errors.password && (
+              <small className="error-message">{errors.password}</small>
+            )}
           </div>
           <div className="form-group password-toggle">
             <input
-              id="confirm-password"
+              id="confirmPassword"
               placeholder=" "
               type={confirmPasswordVisible ? "text" : "password"}
+              value={formData.confirmPassword}
+              onChange={handleInputChange}
               onFocus={() => changeImage("confirmPassword")}
+              onBlur={() => validateField("confirmPassword")}
             />
-            <label htmlFor="confirm-password">Confirm Password</label>
+            <label htmlFor="confirmPassword">Confirm Password</label>
             <i
               className={`fas ${
                 confirmPasswordVisible ? "fa-eye-slash" : "fa-eye"
               } toggle-icon`}
               onClick={() => togglePasswordVisibility("confirmPassword")}
             ></i>
+            {errors.confirmPassword && (
+              <small className="error-message">{errors.confirmPassword}</small>
+            )}
           </div>
 
           <div className="form-group password-toggle ">
@@ -160,16 +313,26 @@ const IndexSignUp = () => {
           </div>
 
           <div className="form-group terms">
-            <input className="terms-input" type="checkbox" />
-            <label htmlFor="terms">
+          <input
+          className={`terms-input`}
+          type="checkbox"
+          checked={checkboxChecked}
+          onChange={handleCheckboxChange}
+        />
+            <label htmlFor="terms" className={`${checkboxError ? "error-checkbox" : ""}`} disabled={checkboxError}>
               I agree to all the{" "}
               <a className="terms-a" href="#">
                 Terms and Privacy Policies
               </a>
             </label>
+            {checkboxError && (
+          <small className="error-message">
+            You must agree to the terms and policies.
+          </small>
+        )}
           </div>
           <div className="form-group">
-            <button className="submit-btn" type="submit">
+            <button className="submit-btn" type="submit" onClick={handleSubmit} disabled={checkboxError}>
               Create account
             </button>
           </div>
