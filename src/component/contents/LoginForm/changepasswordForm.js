@@ -52,12 +52,12 @@ const ChangePasswordForm = ({
     <div className="verify">
       <div
         className="back-to-login"
-        onClick={onSubmitClick}
+        onClick={onBackToLoginClick}
         onFocus={() => onChangeImage("email")}
       >
         <i className="fas fa-arrow-left"></i> Back to login
       </div>
-      <h2>Verify code</h2>
+      <h2>Change Your PassWord</h2>
       <p>An authentication code has been sent to your email.</p>
       <form>
         <div

@@ -115,12 +115,20 @@ p {
   color: red;
 }
 
+.error-message-l {
+  color: red;
+  font-size: 12px;
+  margin-top: -18px;
+  margin-left: 5px;
+  display: flex;
+  position: absolute;
+}
 .success-message {
   color: green;
 }
 .err-mesg {
-  margin-top: -40px;
-  padding: 30px;
+  margin-top: -40px !important;
+  padding: 30px !important;
 }
 #check-password {
   margin-bottom: 10px;
@@ -335,21 +343,21 @@ input[type="text"]:focus {
 .login-container {
   text-align: center;
 }
-.divider {
+.divider-l {
   display: flex;
   align-items: center;
   text-align: center;
   margin: 20px 0 !important;
 }
-.divider::before, .divider::after {
+.divider-l::before, .divider-l::after {
   content: '';
   flex: 1;
   border-bottom: 1px solid #ddd;
 }
-.divider:not(:empty)::before {
+.divider-l:not(:empty)::before {
   margin-right: .25em;
 }
-.divider:not(:empty)::after {
+.divider-l:not(:empty)::after {
   margin-left: .25em;
 }
 @media (max-width: 768px) {

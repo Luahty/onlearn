@@ -21,7 +21,9 @@ root.render(
       <Route path="/login" element={<LoginIndex />} />
       <Route path="/signup" element={<SignUpIndex />} />
 
-      <Route path="/forgotpass" element={<LoginIndex isForgotPassword={true} />} /> {/* Forgot Password */}
+      <Route path="/forgot-password" element={<LoginIndex isForgotPassword={true} />} /> {/* Forgot Password */}
+      <Route path="/change-password" element={<LoginIndex isChangePass={true} />} /> {/* Change Password */}
+    
 
       
       <Route path="/product" element={<PruductIndex />} />

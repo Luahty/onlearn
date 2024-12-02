@@ -5,9 +5,12 @@ import ForgotPasswordForm from "./LoginForm/forgotpasswordForm.js";
 import ChangePasswordForm from "./LoginForm/changepasswordForm.js";
 import "./Css/login.css";
 
-const IndexLogin = ({ isForgotPassword: defaultForgotPassword = false }) => {
+const IndexLogin = ({
+  isForgotPassword: defaultForgotPassword = false,
+  isChangePass: defaultChangePass = false,
+}) => {
   const [isForgotPassword, setIsForgotPassword] = useState(defaultForgotPassword);
-  const [isChangePass, setIsChangePass] = useState(false);
+  const [isChangePass, setIsChangePass] = useState(defaultChangePass);
   const [imageSrc, setImageSrc] = useState(require("../assets/img/scc.png"));
   const [altText, setAltText] = useState(
     "Hand holding a smartphone with a security lock and checkmark"
@@ -34,17 +37,30 @@ const IndexLogin = ({ isForgotPassword: defaultForgotPassword = false }) => {
 
   // Điều chỉnh trạng thái dựa trên URL
   useEffect(() => {
-    if (location.pathname === "/forgotpass") {
+    if (location.pathname === "/forgot-password") {
       setIsForgotPassword(true);
+      setIsChangePass(false);
+    } else if (location.pathname === "/change-password") {
+      setIsChangePass(true);
+      setIsForgotPassword(false);
     } else if (location.pathname === "/") {
       setIsForgotPassword(false);
+      setIsChangePass(false);
     }
   }, [location.pathname]);
 
   // Hàm chuyển hướng đến trang Forgot Password
   const handleForgotPasswordClick = () => {
     setIsForgotPassword(true);
-    navigate("/forgotpass"); // Chuyển hướng URL
+    setIsChangePass(false);
+    navigate("/forgot-password"); // Chuyển hướng URL
+  };
+
+  // Hàm chuyển hướng đến trang Change Password
+  const handleChangePasswordClick = () => {
+    setIsChangePass(true);
+    setIsForgotPassword(false);
+    navigate("/change-password"); // Chuyển hướng URL
   };
 
   return (
@@ -56,17 +72,20 @@ const IndexLogin = ({ isForgotPassword: defaultForgotPassword = false }) => {
               setIsForgotPassword(false);
               navigate("/"); // Quay lại trang chính
             }}
-            onClick={() => setIsChangePass(true)}
+            onClick={handleChangePasswordClick} // Chuyển đến trang Change Password
             onChangeImage={changeImage}
           />
         ) : isChangePass ? (
           <ChangePasswordForm
-            onSubmitClick={() => setIsChangePass(false)}
+            onSubmitClick={() => {
+              setIsChangePass(false);
+              navigate("/"); // Quay lại trang chính
+            }}
             onChangeImage={changeImage}
           />
         ) : (
           <LoginForm
-            onForgotPasswordClick={handleForgotPasswordClick} // Gọi hàm chuyển hướng
+            onForgotPasswordClick={handleForgotPasswordClick} // Chuyển đến Forgot Password
             onChangeImage={changeImage}
           />
         )}
