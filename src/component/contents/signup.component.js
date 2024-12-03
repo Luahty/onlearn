@@ -262,7 +262,7 @@ const IndexSignUp = () => {
     <div className="popup-content">
       <h3>Success</h3>
       <p>Your account has been created successfully!</p>
-      <button onClick={() => setIsPopupVisible(false)}>Close</button>
+      <a href="/login"><button onClick={() => setIsPopupVisible(false)}>Close</button></a>
     </div>
   </div>
 )}
