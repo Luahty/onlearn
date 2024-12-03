@@ -407,7 +407,7 @@ const IndexSignUp = () => {
               value={formData.confirmPassword}
               onChange={combinedOnChangeCPW}
               onFocus={() => changeImage("confirmPassword")}
-              onBlur={() => validateField("confirmPassword")}
+              onBlur={() => validateField("confirmPassword")} 
             />
             <label htmlFor="confirmPassword">Confirm Password</label>
             <i
@@ -420,7 +420,7 @@ const IndexSignUp = () => {
               <small className="error-message-s">{errors.confirmPassword}</small>
             )}
             {passwordMatchError && (
-            <span className="error-message err-mesg">
+            <span className="error-message err-mesg-s err-mesg-s-DM">
               {"\u2717"} Passwords do not match
             </span>
           )}

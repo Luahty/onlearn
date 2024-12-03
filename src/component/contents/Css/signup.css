@@ -170,6 +170,12 @@
   padding: 10px !important;
   margin-bottom: 10px;
 }
+.err-mesg-s-DM {
+  margin-top: -20px !important;
+  margin-bottom: 20px !important;
+  padding-top: -10px !important;
+  padding-bottom: 20px;
+}
 .popup-overlay {
   position: fixed;
   top: 0;
