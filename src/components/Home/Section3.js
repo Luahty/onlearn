@@ -41,7 +41,7 @@ export default function Section3() {
                     </div>
                     <div className="mx-auto group items-center justify-center max-w-[290px] rounded-lg hover:shadow-md p-3 transition-all duration-300 hover:scale-105">
                         <div className="mx-auto w-[50px] rounded-full bg-[#add2fb] m-5">
-                        <img src={require(`../../image/Home/section3/bread.png`)} className="w-full h-auto" alt="" />
+                            <img src={require(`../../image/Home/section3/bread.png`)} className="w-full h-auto" alt="" />
                         </div>
                         <div className="text-center pb-7">
                             <h3 className="text-xl md:text-[27px] text-accent font-semibold">Nutrition</h3>
@@ -51,7 +51,7 @@ export default function Section3() {
                     </div>
                 </div>
                 <div className="w-full text-center py-10">
-                <a href="#" className="rounded-md mx-auto border border-accent bg-white text-center px-14 py-3 text-accent hover:bg-accent hover:text-white">view all</a>
+                    <a href="#" className="rounded-md mx-auto border border-accent bg-white text-center px-14 py-3 text-accent hover:bg-accent hover:text-white">view all</a>
                 </div>
             </div>
         </div>

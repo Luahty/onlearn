@@ -1,0 +1,90 @@
+[33mcommit cef7950869901f0f834e9dc754a45e89c43441a6[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Hải <142956982+haiztvn@users.noreply.github.com>
+Date:   Mon Nov 25 18:10:11 2024 +0700
+
+    Delete src/assets directory
+
+[33mcommit 6b5bb625f04b6e24247ad54b3686d788e9303776[m
+Merge: 35a935f b48d65d
+Author: haiztvn <haiztvn@gmail.com>
+Date:   Mon Nov 25 18:08:18 2024 +0700
+
+    Merge branch 'main' of https://github.com/Luahty/onlearn
+
+[33mcommit b48d65d1651427d89dc1f455c9376a49e9003b60[m
+Author: Hải <142956982+haiztvn@users.noreply.github.com>
+Date:   Mon Nov 25 18:06:26 2024 +0700
+
+    Delete src/assets directory
+
+[33mcommit 35a935f39dd5016def8cf6d2ee15bc5fac27bc8c[m
+Author: haiztvn <haiztvn@gmail.com>
+Date:   Tue Nov 5 19:33:02 2024 +0700
+
+    gom code lan 2
+
+[33mcommit c04a9c5c8c547b04e12ca5d96785a1b90202b842[m
+Author: haiztvn <haiztvn@gmail.com>
+Date:   Tue Nov 5 19:33:02 2024 +0700
+
+    gom code
+
+[33mcommit 847076440a59cd1b3bad96d28031c0c9ca0bb506[m
+Author: Luahty <anhtytv123@gmail.com>
+Date:   Sat Oct 19 13:24:03 2024 +0700
+
+    Thêm Section6
+    - Thêm reponsive
+    - Tắt ảnh lớn < 1024px
+
+[33mcommit 77eff466b962d51ff284d8a40d17565e1e1017cc[m
+Author: Luahty <anhtytv123@gmail.com>
+Date:   Fri Oct 18 10:24:10 2024 +0700
+
+    Thêm Section4, Section5
+    - Bật hiển thị trong App.js
+    - Thêm reponsive
+    Tối ưu reponsive Section1, Footer
+
+[33mcommit 6b9c458bb024793eb8362a858896a7241935fc11[m
+Author: Luahty <anhtytv123@gmail.com>
+Date:   Thu Oct 17 10:57:59 2024 +0700
+
+    Thêm footer
+    - Bật hiển thị trong App.js
+    - Thêm reponsive
+    Tối ưu Section1
+    - Giảm kích thước h1 và height < 768
+    Tối ưu header
+    - Thêm nền trắng vs shadow khi cuộn
+    - Giảm chiều cao khi cuộn
+    - Thêm hover
+
+[33mcommit 7ce1b8031a862b6ad0a85542bf8e0e1829ab5dd4[m
+Author: Luahty <anhtytv123@gmail.com>
+Date:   Wed Oct 16 18:45:52 2024 +0700
+
+    Thêm section1
+    - Reponsive đầy đủ
+    - Tắt hiển thị ảnh người khi width < 1024px
+    Tối ưu lại header
+    - Làm lại reponsive
+    - Phông chữ, kích thước button to hơn
+
+[33mcommit 03c82781d2058fa6cdfd352041996f4649e08739[m
+Author: Luahty <anhtytv123@gmail.com>
+Date:   Mon Oct 14 19:24:28 2024 +0700
+
+    Header
+
+[33mcommit 400e9508efb18ea72fc2041051cd6befa8dfafef[m[33m ([m[1;31morigin/front-end[m[33m, [m[1;31morigin/category[m[33m)[m
+Author: Luahty <anhtytv123@gmail.com>
+Date:   Mon Oct 14 19:16:27 2024 +0700
+
+    Initial commit
+
+[33mcommit d9adfc493cca3ada41a6fcd2f9a69e884a824737[m
+Author: Luahty <anhtytv123@gmail.com>
+Date:   Mon Oct 14 11:16:12 2024 +0700
+
+    Initialize project using Create React App
