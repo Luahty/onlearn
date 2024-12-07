@@ -6,7 +6,7 @@ import IndexSignUp from "../contents/signup.component";
 // import ProductPage from "../Content/shop.component";
 
 function SignUpIndex() {
-    React.useEffect(() => {
+React.useEffect(() => {
         document.body.classList.add("index-page");
         document.body.classList.add("sidebar-collapse");
         document.documentElement.classList.remove("nav-open");

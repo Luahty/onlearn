@@ -11,7 +11,7 @@ const Exercises = () => {
         // Fetch exercises based on topic_id
         const fetchExercises = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/exercises/${topic_id}`);
+                const response = await axios.get(`https://backend-daily-m7gs.onrender.com/api/exercises/${topic_id}`);
                 setExercises(response.data); // Save exercises to state
             } catch (err) {
                 console.error("Error fetching exercises:", err);
@@ -23,7 +23,6 @@ const Exercises = () => {
     }, [topic_id]);
 
     if (error) return <div>{error}</div>; // Show error message if there's an error
-    console.log(exercises);
 
     return (
         <div className="">

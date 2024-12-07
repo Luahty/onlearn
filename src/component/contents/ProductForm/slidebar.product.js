@@ -50,15 +50,10 @@ const Sidebar = () => {
 
   return (
     <aside className="sidebar">
-      <div className="search-container">
-        <i className="fas fa-search icon-search"></i>
-        <input type="search" placeholder="Search" />
-        
-      </div>
       <div className="clear-filters">
-      <a href="#" className="clear-filters" onClick={clearAllFilters}>
-        Clear all
-      </a>
+        <a href="#" className="clear-filters" onClick={clearAllFilters}>
+          Clear all
+        </a>
       </div>
       <div className="filter">
         <h3 onClick={toggleFilterVisibility}>

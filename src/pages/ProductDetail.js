@@ -24,7 +24,7 @@ function ProductDetail() {
         // Fetch exercises based on topic_id
         const fetchExercises = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/exercise-segments/${token}`);
+                const response = await axios.get(`https://backend-daily-m7gs.onrender.com/api/exercise-segments/${token}`);
                 setSegments(response.data); // Save exercises to state
             } catch (err) {
                 console.error("Error fetching exercises:", err);
@@ -115,11 +115,11 @@ function ProductDetail() {
     }); // Lắng nghe thay đổi của audio_file
 
 
-    if (!segment) return <div className="loading">Đang tải dữ liệu...</div>;
+    if (!segment) return <div className="loading">Loading data...</div>;
     return (
         <div className='p-4 py-20 lg:p-40'>
             <div className=''>
-                <div className='font-semibold text-xl py-4'>Nghe Đoạn Âm Thanh Sau</div>
+                <div className='font-semibold text-xl py-4'>Listen to the Audio Below</div>
                 <div className='flex gap-x-4 py-4'>
                     <button className="bg-green-200 px-2 border-2 rounded-full hover:bg-green-500" onClick={decreaseIndex}>{`<`}</button>
                     <div className='flex'>
@@ -129,7 +129,7 @@ function ProductDetail() {
                                 {segment.segment_number}
                             </div>
                         ) : (
-                            <div>Không có dữ liệu</div>
+                            <div>Not Null</div>
                         )}/{segments.length}
                     </div>
                     <button className="bg-green-200 px-2 border-2 rounded-full hover:bg-green-500" onClick={increaseIndex}>{`>`}</button>
@@ -150,7 +150,7 @@ function ProductDetail() {
 
             </div>
             <div className='h-[1px] bg-black my-4'></div>
-            <div className='font-semibold text-xl py-2'>Nhập Nội Dung Câu Trả Lời</div>
+            <div className='font-semibold text-xl py-2'>Enter Answer Content</div>
             <form onSubmit={(e) => e.preventDefault()}>
                 <textarea
                     id="message"
@@ -171,7 +171,7 @@ function ProductDetail() {
             {!isToggled ? '' :
                 (<div className="bg-gray-100 p-4 my-2 rounded-xl">
                     <div className='flex justify-between'>
-                        <div className='font-semibold text-xl py-4'>Nội dung</div>
+                        <div className='font-semibold text-xl py-4'>Content</div>
                         <button onClick={() => startOver()}
                             className="bg-green-200 px-4 rounded-xl font-semibold hover:bg-red-500 hover:text-white" >
                             Rest

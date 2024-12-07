@@ -14,7 +14,7 @@ const ProductGrid = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/api/topics"); // Địa chỉ API
+                const response = await axios.get(`https://backend-daily-m7gs.onrender.com/api/topics`); // Địa chỉ API
                 setProducts(response.data); // Ghi dữ liệu từ API vào state
                 setLoading(false); // Dừng trạng thái tải
             } catch (err) {
@@ -69,13 +69,13 @@ const ProductGrid = () => {
                     <i className="fas fa-search icon-search"></i>
                     <input
                         type="search"
-                        placeholder="Tìm kiếm sản phẩm"
+                        placeholder="Search"
                         value={searchQuery}
                         onChange={handleSearchChange}
                     />
                 </div>
                 <select onChange={handleLevelFilterChange} value={levelFilter}>
-                    <option value="all">Tất cả mức độ</option>
+                    <option value="all">Ranking All</option>
                     <option value="easy">Easy</option>
                     <option value="medium">Medium</option>
                     <option value="hard">Hard</option>
